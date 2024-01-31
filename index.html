@@ -7,9 +7,7 @@
     <title>My Basic HTML5 Page with jQuery</title>
 
     <!-- Include the latest version of jQuery from the CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-KJ3o2DKtIvV4yz8bl1I2fu/7jskPWypdVmL3FCG8WGTw="
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         /* Your CSS styles can go here */
@@ -51,6 +49,7 @@
     <section>
         <h2>Section 2</h2>
         <p>Feel free to customize and expand this page as needed.</p>
+        <button>Click here</button>
     </section>
 
     <footer>
@@ -59,6 +58,18 @@
 
     <!-- Your jQuery and additional scripts can go here -->
 
+    <script>
+        $('button').on('click', (e) => {
+          // do something synchronously randomly
+          if (Math.random() < 0.5) {
+            // append an input
+            $('<input />').appendTo($('body'))
+          } else {
+            // or append a textarea
+            $('<textarea />').appendTo($('body'))
+          }
+        })
+    </script>
 </body>
 
 </html>
